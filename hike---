@@ -1,0 +1,13 @@
+A1)
+ i) select cust_id, totalsales, data from retail where month(date)==1 and total_sales in (select max(sales)) from retail a where month(a.date)=1);
+ii) select customer_id, retail_date, total_sales from retail where total_sales in (select(max sales) from retail);
+
+A2)
+i) select product_id,product_subclass (sum(total_sales - sum(total_cost)) as profit from retail group by product_id,product_subclass;
+   select product_id,product_subclass (sum(total_sales- sum(total_cost))/total_cost)*100 as profit from retail groupby product_id,product_subclass;
+ 
+B)
+i)  select product_id, total_sales from retail order by total_sales desc limit10;
+   
+
+ 
